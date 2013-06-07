@@ -179,5 +179,5 @@ d3.csv "countries.csv", (error, data) ->
 			when 39 then increaseYear(); break
 
 	# Buttons
-	leftButton.on "click", -> decreaseYear()
-	rightButton.on "click", -> increaseYear()
+	leftButton.addEventListener "click", -> decreaseYear()
+	rightButton.addEventListener "click", -> increaseYear()

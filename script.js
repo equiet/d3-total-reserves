@@ -135,10 +135,10 @@
           break;
       }
     });
-    leftButton.on("click", function() {
+    leftButton.addEventListener("click", function() {
       return decreaseYear();
     });
-    return rightButton.on("click", function() {
+    return rightButton.addEventListener("click", function() {
       return increaseYear();
     });
   });
