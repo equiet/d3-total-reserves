@@ -92,12 +92,12 @@
       title.text(currentYear);
       currentData = parseData(data, currentYear);
       arcWrapper.selectAll(".arc").data(currentData);
-      arcWrapper.selectAll("path").data(currentData).transition().duration(500).attr("d", arc(0)).attr("fill", function(d, i) {
+      arcWrapper.selectAll("path").data(currentData).transition().duration(300).attr("d", arc(0)).attr("fill", function(d, i) {
         return "hsl(" + d.hue + ", 60%, " + (i % 2 * 2 + 40) + "%)";
       }).attr("stroke", function(d, i) {
         return "hsl(" + d.hue + ", 60%, " + (i % 2 * 2 + 40) + "%)";
       });
-      return arcWrapper.selectAll("text").data(currentData).transition().duration(500).attr("opacity", function(d, i) {
+      return arcWrapper.selectAll("text").data(currentData).transition().duration(300).attr("opacity", function(d, i) {
         return (d.end - d.start) * 20;
       }).attr("y", -10).text(function(d, i) {
         return d.countryCode;

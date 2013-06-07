@@ -138,14 +138,14 @@ d3.csv "countries.csv", (error, data) ->
 
 		arcWrapper.selectAll("path")
 			.data(currentData)
-			.transition().duration(500)
+			.transition().duration(300)
 				.attr("d", arc(0))
 				.attr("fill", (d, i) -> return "hsl(#{d.hue}, 60%, #{i%2 * 2 + 40}%)")
 				.attr("stroke", (d, i) -> return "hsl(#{d.hue}, 60%, #{i%2 * 2 + 40}%)")
 
 		arcWrapper.selectAll("text")
 			.data(currentData)
-			.transition().duration(500)
+			.transition().duration(300)
 				.attr("opacity", (d, i) -> return (d.end - d.start) * 20)
 				.attr("y", -10)
 				.text((d, i) -> return d.countryCode)
